@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: visionguard-api
+    runtime: python
+    plan: starter
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: VISIONGUARD_DATA_DIR
+        value: /var/data
+      - key: VISIONGUARD_CORS_ORIGINS
+        sync: false
+    disk:
+      name: visionguard-data
+      mountPath: /var/data
+      sizeGB: 1

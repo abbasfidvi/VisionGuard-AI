@@ -1,0 +1,23 @@
+{
+  "class_names": [
+    "DEFECTIVE",
+    "GOOD"
+  ],
+  "label_map": {
+    "0": "DEFECTIVE",
+    "1": "GOOD"
+  },
+  "class_indices": {
+    "def_front": 0,
+    "ok_front": 1
+  },
+  "input_size": [
+    224,
+    224
+  ],
+  "confidence_threshold": 70.0,
+  "model_architecture": "MobileNetV2 + GlobalAvgPool + Dense(1, sigmoid)",
+  "training_epochs": 8,
+  "batch_size": 32,
+  "learning_rate": 0.001
+}

@@ -1,0 +1,21 @@
+{
+  "accuracy": 99.16,
+  "precision": 0.9776,
+  "recall": 1.0,
+  "f1_score": 0.9887,
+  "confusion_matrix": [
+    [
+      447,
+      6
+    ],
+    [
+      0,
+      262
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "DEFECTIVE",
+    "GOOD"
+  ],
+  "test_samples": 715
+}

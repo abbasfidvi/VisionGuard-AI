@@ -1,0 +1,105 @@
+/* History page styles */
+
+.history-page {
+  max-width: 1200px;
+}
+
+.confirm-dialog {
+  background: var(--red-bg);
+  border: 1px solid var(--red-border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--red-light);
+}
+
+.history-error {
+  background: var(--red-bg);
+  border: 1px solid var(--red-border);
+  color: var(--red-light);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.history-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.history-id {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.history-confidence {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.decision-text {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+.decision-accept { color: var(--green-light); }
+.decision-reject { color: var(--red-light); }
+
+.signal-active {
+  color: var(--red-light);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.signal-inactive {
+  color: var(--green-light);
+  font-size: 13px;
+}
+
+.history-time {
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+  font-family: var(--font-mono);
+}
+
+.page-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  gap: 16px;
+  color: var(--text-secondary);
+}
+
+.history-page { max-width: 1480px; }
+.history-page > .flex:first-child { gap: 20px; }
+.history-page > .card { padding: 12px 20px 20px; }
+.confirm-dialog,
+.history-error { border-radius: 13px; padding: 15px 18px; }
+.confirm-dialog { background: linear-gradient(120deg, rgba(240, 107, 119, 0.13), rgba(240, 107, 119, 0.045)); }
+.history-count { padding: 6px 4px 12px; color: var(--text-muted); }
+.table-wrapper { border: 1px solid var(--border-muted); border-radius: 12px; }
+.data-table { min-width: 840px; }
+.history-id,
+.history-confidence,
+.history-time { font-variant-numeric: tabular-nums; }
+.decision-text { letter-spacing: 0.06em; }
+.signal-active,
+.signal-inactive { white-space: nowrap; }
+.history-page .empty-state { padding: 74px 20px; }
+
+@media (max-width: 620px) {
+  .history-page > .flex:first-child { align-items: flex-start; flex-direction: column; }
+  .history-page > .flex:first-child > .flex { width: 100%; }
+  .history-page > .flex:first-child > .flex .btn { flex: 1; justify-content: center; }
+}
